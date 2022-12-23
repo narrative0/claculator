@@ -1,0 +1,32 @@
+package Project1;
+
+import java.util.Scanner;
+
+public class Demo2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("문자열 3개를 입력해주세요 : abc bad cbf" );
+		String text1 = sc.next();
+		String text2 = sc.next();
+		String text3 = sc.next();
+		
+		int num1 = text1.compareTo(text2);
+		int num2 = text2.compareTo(text3);
+		int num3 = text3.compareTo(text1);
+		
+		if(num1 < 0 && num2 < 0 && num3 > 0) {
+			System.out.println(text1 + " " + text2 + " " + text3);//abc def ghi
+		} else if(num1 > 0 && num2 > 0 && num3 < 0) {
+			System.out.println(text3 + " " + text2 + " " + text1); //ghi def abc
+			
+		} else if(num1 < 0 && num2 > 0 && num3 < 0) { //3번 1번 2번순으로 작음
+			System.out.println(text3 + " " + text1 + " " + text2); //def ghi abc
+			
+		} else if(num1 < 0 && num2 > 0 && num3 > 0) {
+			System.out.println(text1 + " " + text3 + " " + text2); //abc ghi def
+		
+		}
+	}
+
+}
